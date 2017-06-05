@@ -1,57 +1,8 @@
-var BasicCard = require("./BasicCard.js");
+var presidents = require("./script.js");
 
 var fs = require("fs"); // necessary to write and print to a txt file
 
 var userChoice = process.argv[2];
-
-var presidents = [ // jsObject array of U.S. Presidents including little-known ACTUAL first
-    {number: "zero", name: "Christian Montoya"},
-    {number: "first", name: "George Washington"},
-    {number: "second", name: "John Adams"},
-    {number: "third", name: "Thomas Jefferson"},
-    {number: "fourth", name: "James Madison"},
-    {number: "fifth", name: "James Monroe"},
-    {number: "sixth", name: "John Quincy Adams"},
-    {number: "seventh", name: "Andrew Jackson"},
-    {number: "eighth", name: "Martin Van Buren"},
-    {number: "ninth", name: "William Henry Harrison"},
-    {number: "tenth", name: "John Tyler"},
-    {number: "eleventh", name: "James K. Polk"},
-    {number: "twelfth", name: "Zachary Taylor"},
-    {number: "thirteenth", name: "Millard Fillmore"},
-    {number: "fourteenth", name: "Franklin Pierce"},
-    {number: "fifteenth", name: "James Buchanan"},
-    {number: "sixteenth", name: "Abraham Lincoln"},
-    {number: "seventeenth", name: "Andrew Johnson"},
-    {number: "eighteenth", name: "Ulysses S. Grant"},
-    {number: "nineteenth", name: "Rutherford B. Hayes"},
-    {number: "twentieth", name: "James A. Garfield"},
-    {number: "twentyfirst", name: "Chester A. Arthur"},
-    {number: "twentysecond", name: "Grover Cleveland"},
-    {number: "twentythird", name: "Benjamin Harrison"},
-    {number: "twentyfourth", name: "Grover Cleveland"},
-    {number: "twentyfifth", name: "William McKinley"},
-    {number: "twentysixth", name: "Theodore Roosevelt"},
-    {number: "twentyseventh", name: "William Howard Taft"},
-    {number: "twentyeighth", name: "Woodrow Wilson"},
-    {number: "twentyninth", name: "Warren G. Harding"},
-    {number: "thirtieth", name: "Calvin Coolidge"},
-    {number: "thirtyfirst", name: "Herbert Hoover"},
-    {number: "thirtysecond", name: "Franklin D. Roosevelt"},
-    {number: "thirtythird", name: "Harry S. Truman"},
-    {number: "thirtyfourth", name: "Dwight D. Eisenhower"},
-    {number: "thirtyfifth", name: "John F. Kennedy"},
-    {number: "thirtysixth", name: "Lyndon B. Johnson"},
-    {number: "thirtyseventh", name: "Richard Nixon"},
-    {number: "thirtyeighth", name: "Gerald Ford"},
-    {number: "thirtyninth", name: "Jimmy Carter"},
-    {number: "fortieth", name: "Ronald Reagan"},
-    {number: "fortyfirst", name: "George H. W. Bush"},
-    {number: "fortysecond", name: "Bill Clinton"},
-    {number: "fortythird", name: "George W. Bush"},
-    {number: "fortyfourth", name: "Barack Obama"},
-    {number: "fortyfifth", name: "Donald Trump"}
-];
 
 function ClozeCard(text, cloze) {
     this.fullText = text;
